@@ -37,16 +37,16 @@ class Solution:
 
         # Prim's algorithm with min heap
         mst = collections.defaultdict(list)
-        mini_heap = [(w, 0, y) for y, w in graph[0]]  # 从0位置出发构造，（weight， 0， end）
+        mini_heap = [(w, 0, y) for y, w in graph[0]]  # 从0位置出发构造，（weight， start， end）
         max_risk = 0
 
-        while n not in mst:
+        while n not in mst:  # 要到达n点
             w, s, e = heapq.heappop(mini_heap)  # weight start end 当前弹出来的就是权重最小的
             if e not in mst:
                 mst[s].append((e, w))
                 mst[e].append((s, w))
                 max_risk = max(max_risk, w)
-                for ee, ew in graph[e]:  # 以e为起点，ee为重点，权重为ew的边
+                for ee, ew in graph[e]:  # 以e为起点，ee为终点，权重为ew的边
                     if ee not in mst:
                         heapq.heappush(mini_heap, (ew, e, ee))
 
