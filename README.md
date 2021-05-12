@@ -14,14 +14,8 @@
 
 
 
-Gitbook: https://greyireland.gitbook.io/algorithm-pattern/
+**参考引用：**
 
-GitHub: https://github.com/greyireland/algorithm-pattern
-
-
-
-# Carl LeetCode
-
-
-
-https://github.com/youngyangyang04/leetcode-master
+- [x] https://greyireland.gitbook.io/algorithm-pattern/
+- [x] https://github.com/greyireland/algorithm-pattern
+- [x] https://github.com/youngyangyang04/leetcode-master
